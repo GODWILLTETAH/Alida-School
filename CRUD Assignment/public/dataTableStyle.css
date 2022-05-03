@@ -1,0 +1,89 @@
+body {
+    width: 960px;
+    margin: 0 auto;
+    font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 125%;
+    color: #2b669a;
+}
+
+p {
+    text-align: justify;
+}
+
+small {
+    font-weight: 700;
+}
+
+table {
+    margin: 50px 0;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table th {
+    font-size: 0.8em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    border-bottom: 2px solid #2b669a;
+    padding: 1em 0;
+}
+
+table td {
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+    padding: 16px 0;
+    text-align: center;
+    border-bottom: 1px solid #8097b5;
+}
+
+table tr {
+    padding: 5px;
+}
+
+table th:first-child {
+    text-align: left;
+}
+
+table td:first-child {
+    text-align: left;
+}
+
+tbody tr:last-child {
+    border-bottom: 2px solid #2b669a;
+}
+
+
+/* #### styles for devices 301-500px wide #### */
+@media screen and (min-width: 301px) and (max-width: 500px) {
+
+    html, body {
+        width: auto;
+        padding: 0 10px;
+    }
+
+    table {
+        text-align: left;
+    }
+
+    table th {
+        border: none;
+        display: none;
+    }
+
+    table td:before {
+        margin: 5px 0;
+        content: attr(data-label);
+        display: block;
+    }
+
+    table td {
+        display: block;
+        border: none;
+        text-align: left;
+    }
+
+    tbody tr {
+        border-bottom: 2px solid #2b669a;
+    }
+}

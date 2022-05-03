@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Collected</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="/dataTableStyle.css">
+</head>
+<body>
+
+        
+
+
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>Email</th>
+            <th>USERNAME</th>
+            <th>Password </th>
+            <th> ID</th>
+            <th> Edit </th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+            <% posts.forEach(function(post){%>
+        <tr>
+            <td > <a href="#"><%= post.email %></a> </td>
+            <td><%= post.username %></td>
+            <td> <%= post.password %> </td>
+            <td><%= post._id %></td>
+            <td><a href="/update/<%=post._id%>"> Edit </a></td>  
+            <td><a href="/delete/<%=post._id%>" onclick="return confirm('Are you sure to delete this record ?');"> Delete </a></td>
+        </tr>
+        <%})%>
+        
+        </tbody>
+    </table>
+</div>
+
+<center>
+    <p>
+        <pre>  <a href="/">Home ||</a> <a href="/">Home </a> </pre>
+    </p>
+</center>
+</body>
+</html>

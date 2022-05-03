@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Edit </title>
+  <link rel="stylesheet" href="/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div>
+  
+  <form action="/update/:_id" method="post">
+    <h4 class="text-warning text-center pt-5">Edit</h4>
+
+    <label>
+      <input type="text" class="input" name="email" value="<%= post.email %>"/>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+    </label>
+
+    <label>
+        <input type="text" class="input" name="username" value="<%= post.username %>"/>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+    </label>
+
+    <label>
+        <input type="password" class="input" name="password" value="<%= post.password %>"/>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+    </label>
+
+    <button type="submit">submit</button>
+  </form>
+</div>
+ </body>
+</html>
