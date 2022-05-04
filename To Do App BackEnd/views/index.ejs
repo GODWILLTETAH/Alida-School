@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js" defer></script> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+        integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
+    <title>To Do App</title>
+</head>
+
+<body>
+    <div class="all">
+        <div class="header">
+            <h1>Todo Web App</h1>
+        </div>
+        <div class="bottom"></div>
+
+        <form class="form" id="new" method="post" action="/add-item">
+            <div class="add-task">
+                <label for="name" class="new-task" >New Task </label>
+                <div class="input">
+                    <input type="text" id="f1" name="item" class="new-task" />
+                    <button class="add" id="new">Add</button>
+               
+                </div>
+                
+            </div>
+        
+            <form id="edit" class="form">
+            <div class="task-list" id="tasks">
+                <div class="edit">
+                    <div class="input-edit">
+                        
+                        <label for="name" class="edit-text">Edit </label>
+                        <input type="text" id="fval" name="name" class="edit-task" />
+                        <button class="update" id="edit" type="submit">Update</button>
+                    </div>
+
+                </div>
+        </form>
+            <div id="todo_container" class="options">
+                <% items.forEach(function(item){ %>
+                    <div class="todo_content">
+                        <div> 
+                            <input type="checkbox" class="checkbox" id="<%= item._id %>"  />
+                            <label for="<%= item._id %>"> <%= item.item %></label> 
+                        </div>
+                        <div class="action_btn">
+                            <div class="pencil">&#9998;</div>
+                            <div class="trash" name="delete"><a href="/delete/<%= item._id %>" onclick="return confirm('Are you sure to delete this record ?');">&#x1F5D1;</a></div>
+                        </div>
+                    </div>
+                  <% }); %>
+            </div>
+    </div>
+    
+
+</body>
+
+
+</html>

@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Creepster&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.todos{
+    background-color: beige;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+   
+}
+
+.todo_content{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0px;
+    width: 100%;
+    background-color: #e9e8e8;
+    margin: 5px;
+    
+}
+
+.todo_content:hover{
+    background-color: rgb(181, 179, 179);
+}
+
+.todo_content .action_btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+#todo_container{
+    padding: 1px 10px;
+    margin-left: -6px;
+}
+
+.todos li{
+    font-size: 1rem;
+    padding: 1rem 2rem;
+}
+
+
+.icondiv {
+    width: 20%;
+    float:right;
+   ;
+}
+
+.todos li.completed{
+text-decoration: line-through;
+}
+
+.form {
+    position: absolute;
+    margin: auto;
+    width: 40%;
+    height: 60%;
+    padding: 10px;
+    top: 20vh;
+    left: 30%;
+}
+
+h1 {
+    font-size: 60px;
+    color: white;
+    letter-spacing: 2;
+    margin-top: auto;
+}
+
+.all {
+    position: relative;
+}
+
+.header {
+    height: 35vh;
+    background-color: #19F0BCBF;
+    text-align: center;
+    z-index: -1;
+    align-items: center;
+}
+
+.bottom {
+    height: 65vh;
+    background-color: beige;
+    z-index: -1;
+}
+
+
+
+.add-task {
+    width: 100%;
+    height: 20%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+label.new-task {
+    margin: 0.3rem;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #19F0BCBF;
+}
+
+input.new-task {
+    background-color: rgb(207, 204, 204);
+    height: 30px;
+    border-radius: 5px 0 0 5px;
+    display: inline-block;
+    width: 80%;
+}
+
+.add {
+    background-color: #19F0BCBF;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    height: 30px;
+    width: 15%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.input {
+    display: flex;
+    justify-content: space-around;
+}
+
+.task-list {
+    height: 90%;
+    background-color: white;
+    margin-top: 1.5rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+}
+
+.edit {
+    background-color: #19F0BCBF;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-text {
+    color: white;
+    font-weight: bold;
+}
+
+.edit-task {
+    width: 70%;
+    background-color: white;
+    height: 35px;
+    border-radius: 5px 0 0 5px;
+}
+
+.input-edit {
+    width: 100%;
+    text-align: center;
+}
+
+.update {
+    background-color: white;
+    color: #19F0BCBF;
+    border-radius: 0 5px 5px 0;
+    height: 35px;
+    width: 15%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.check,
+.icons {
+    display: inline-block;
+}
+
+.check {
+    width: 80%;
+    padding-left: 8%;
+}
+
+.check>input {
+    margin-right: 5%;
+}
+
+.icons {
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div.icons span {
+    text-align: center;
+}
+
+
+
+.pencil {
+    color: #19F0BCBF;
+}
+
+.trash {
+    color: red;
+}
+
+#pencil{
+    margin-left: 105px;       /*75*/
+    position: relative;
+    top:-0px
+    
+}
+
+#trash{
+    color:red;
+    font-weight: bold;
+    position: relative;
+    top:-25px;
+    margin-left: 85px   /*35*/
+}
+
+.todo_content input.completed[type="checkbox"]{
+    text-decoration: line-through;
+    }
