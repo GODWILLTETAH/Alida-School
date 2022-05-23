@@ -1,6 +1,6 @@
 const express = require ('express');
 const app = express ();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const ejs = require ('ejs');
 const mongoose = require ('mongoose');
 const path = require('path');
@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use('/', require('./routes/index'))
 
 mongoose
-        .connect ('mongodb://localhost:27017/ToDoApp', {useNewUrlParser: true, useUnifiedTopology: true})  
+        .connect ('mongodb+srv://go:<CMZJO7NewcdjEiwW>@testcluster.3sasu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})  
         .then(() => console.log('MongoDB Connected'))
          .catch(err => console.log(err));
 
