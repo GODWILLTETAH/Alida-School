@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use('/', require('./routes/index'))
 
 mongoose
-        .connect ('mongodb+srv://go:<CMZJO7NewcdjEiwW>@testcluster.3sasu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})  
+        .connect ('Mongo UR:', {useNewUrlParser: true, useUnifiedTopology: true})  
         .then(() => console.log('MongoDB Connected'))
          .catch(err => console.log(err));
 
